@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Logo from "./Logo.jsx";
 import Button from "./Button.jsx";
@@ -26,7 +27,7 @@ export default function PublicNav() {
           <Link to="/abrechnung"><Button>Gratis starten</Button></Link>
         </div>
         <button onClick={() => setOpen((v) => !v)} className="lg:hidden rounded-2xl w-12 h-12 flex items-center justify-center bg-putzit-light text-putzit-dark">
-          {open ? "×" : "☰"}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
       {open ? (
